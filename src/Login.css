@@ -1,5 +1,5 @@
 .container-general{
-  background-color: #282c34;
+  background-color: rgb(34, 36, 41);
   min-height: 100vh;
 }
 .form-container {
@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 3vmin);
-  color: white;
+  width:100%;
 }
 
 .logo-container{
@@ -18,8 +18,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top:5%
 }
 
 .logo{
   width: 22%;
+}
+
+.ant-input {
+  background-color: rgb(25, 26, 27);
+  color:white;
+}
+.ant-input-affix-wrapper {
+  background-color: rgb(25, 26, 27);
+  border-color:rgb(62, 65, 65)
+}
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper, .ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover{
+  background-color: rgb(25, 26, 27);
+  border-color:rgb(62, 65, 65)
 }
