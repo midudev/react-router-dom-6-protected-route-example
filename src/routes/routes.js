@@ -7,17 +7,17 @@ import Dashboard from '../Pages/Dashboard';
 const routes = [
 	{
 		path: '/login',
-		component: Login,
+		element: Login,
 		isPrivate: false,
 	},
 	{
 		path: '/dashboard',
-		component: Dashboard,
+		element: Dashboard,
 		isPrivate: false,
 	},
 	{
 		path: '/*',
-		component: NotFound,
+		element: NotFound,
 		isPrivate: false,
 	},
 ];

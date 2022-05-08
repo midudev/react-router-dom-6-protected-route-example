@@ -1,16 +1,17 @@
 import React from "react";
-import { Navigate, Route } from "react-router-dom";
- 
-const AppRoutes = ({ component: Component,props, path, isPrivate, ...rest }) => {
-	console.log("test")
- 
-    const userDetails = true
+import { Navigate } from "react-router-dom";
+import {BrowserRouter, Route, Routes, Router} from 'react-router-dom'
+const AppRoutes = ({ element : Element, path, isPrivate, ...rest }) => {
+	const userDetails = true 
+    
 	return (
-		<Route
-			path={path}
-			render={(props) => isPrivate && !Boolean(userDetails) ? (<Navigate replace to='/login'/>) : (<Component {...props} />)}
-			{...rest}
-		/>)
-}
+		<Route {...rest}
+			element={(!userDetails && isPrivate)
+					? (<Navigate to ="/login" />)
+					: (<Navigate to ="/login" /> )
+		}
+	  />
+	)
+  };
  
-export default AppRoutes
+export default AppRoutes;
