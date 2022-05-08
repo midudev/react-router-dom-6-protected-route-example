@@ -1,11 +1,23 @@
 import { Form, Input, Button, Checkbox } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.css'
-import './Login.css'
+import './index.css'
+const urll = ('http://localhost:8000/users/')
 
 const Login = () => {
+  const enviarDatos = async (url, values) => {
+    const resp = await window.fetch(`${url}/${values.username}`, {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json"'
+      }
+    })
+    console.log(resp)
+  }
+
   const onFinish = (values) => {
-    console.log('Received values of form: ', values)
+    enviarDatos(urll, values)
   }
 
   return (

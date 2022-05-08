@@ -18,17 +18,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top:5%
+  padding-top:6%
 }
 
-.logo{
-  width: 22%;
+.logo-container img{
+    width: 22%;
+    height: 22%;
+    background-color: rgb(34, 36, 41);
 }
 
 .ant-input {
   background-color: rgb(25, 26, 27);
   color:white;
 }
+
 .ant-input-affix-wrapper {
   background-color: rgb(25, 26, 27);
   border-color:rgb(62, 65, 65)
