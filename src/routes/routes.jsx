@@ -1,7 +1,7 @@
 import NotFound from '../Pages/NotFound';
 import Login from '../Pages/Login';
 import Dashboard from '../Pages/Dashboard';
-import ProtectedRoute from '../Components/AppRoutes.jsx';
+import ProtectedRoute from '../Components/ProtectedRoute.jsx';
 
 const routes = [
 	{
