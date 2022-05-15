@@ -1,17 +1,11 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
-import {BrowserRouter, Route, Routes, Router} from 'react-router-dom'
-const AppRoutes = ({ element : Element, path, isPrivate, ...rest }) => {
+
+const ProtectedRoute = ({ children }) => {
 	const userDetails = true 
     
-	return (
-		<Route {...rest}
-			element={(!userDetails && isPrivate)
-					? (<Navigate to ="/login" />)
-					: (<Navigate to ="/login" /> )
-		}
-	  />
-	)
+	return !userDetails
+		? <Navigate to ="/login" />
+		: children
   };
  
-export default AppRoutes;
+export default ProtectedRoute;

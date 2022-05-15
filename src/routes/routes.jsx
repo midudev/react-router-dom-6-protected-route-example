@@ -1,24 +1,25 @@
-import React from 'react';
 import NotFound from '../Pages/NotFound';
 import Login from '../Pages/Login';
 import Dashboard from '../Pages/Dashboard';
-
+import ProtectedRoute from '../Components/AppRoutes.jsx';
 
 const routes = [
 	{
 		path: '/login',
-		element: Login,
-		isPrivate: false,
+		element: (
+			<ProtectedRoute>
+				<Login />
+			</ProtectedRoute>
+		)	
 	},
 	{
 		path: '/dashboard',
-		element: Dashboard,
-		isPrivate: false,
+		element: <Dashboard />
 	},
 	{
 		path: '/*',
-		element: NotFound,
-		isPrivate: false,
+		element: <NotFound />
 	},
 ];
+
 export default routes;

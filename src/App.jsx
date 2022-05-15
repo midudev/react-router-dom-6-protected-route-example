@@ -1,23 +1,8 @@
-import react from 'react'
-import routes from './routes/routes.js'
-import {BrowserRouter, Route, Routes, Navigate, Router, Outlet} from 'react-router-dom'
-import AppRoutes from './Components/AppRoutes'
+import routes from './routes/routes.jsx'
+import {BrowserRouter, useRoutes} from 'react-router-dom'
 function App () {
-  return (
-    
-  <BrowserRouter>
-    <Routes>
-       {routes.map((rout) => ( 
-         console.log(rout),
-        <AppRoutes 
-          key={rout.path}
-          path={rout.path}
-          element={rout.element}
-          isPrivate={rout.isPrivate}
-          />
-      ))}
-    </Routes>
-  </BrowserRouter>
-)}
+  const element = useRoutes(routes)
+  return element
+}
 
-export default App
+export default () => <BrowserRouter><App /></BrowserRouter>
